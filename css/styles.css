@@ -28,6 +28,7 @@ ul {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -254,9 +255,9 @@ a {
     display: block;
     margin-bottom: 24px;
 
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 1.17;
+    line-height: 1.2;
 
 
     color: #4d5ae5;
@@ -268,6 +269,7 @@ a {
 
     font-size: 20px;
     line-height: 1.2;
+    font-weight: 500;
 
     color: #434455;
 }
@@ -323,9 +325,9 @@ a {
 
 /*                            Purpose  MOBILE                            */
 .purpose {
-    padding: 112px 0;
+    padding: 72px 0;
 
-    max-width: 1140px;
+
     margin: 0 auto;
 
     background-image:
@@ -451,7 +453,7 @@ a {
 
 .worker-item {
     width: 264px;
-    height: 428px;
+    min-height: 428px;
 
     background-color: #ffffff;
 
@@ -503,10 +505,6 @@ a {
 }
 
 /* PORTFOLIO MOBILE */
-
-.portfolio-section {
-    padding: 96px 0;
-}
 
 .portfolio-title {
     margin-bottom: 72px;
@@ -754,9 +752,9 @@ a {
 
 .modal {
     position: absolute;
-    top: 8px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%) scale(0.95);
+    transform: translate(-50%, -50%) scale(0.95);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     width: 288px;
@@ -769,7 +767,7 @@ a {
 }
 
 .backdrop.is-open .modal {
-    transform: translateX(-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-title {
@@ -918,7 +916,7 @@ a {
 
 /*                                  Tablet                           */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-resolution:2dppx) {
 
     .container {
         max-width: 768px;
@@ -964,7 +962,7 @@ a {
     .address-link {
         display: block;
 
-        padding: 24px 0;
+        padding: 0;
 
         font-size: 12px;
         line-height: 1.17;
@@ -993,13 +991,13 @@ a {
             url('../images/bg-header-tab.jpg');
     }
 
-    @media (min-resolution:2dppx) {
-        .purpose {
-            background-image:
-                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url('../images/bg-header-tab@2x.jpg');
-        }
+
+    .purpose {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/bg-header-tab@2x.jpg');
     }
+
 
     .purpose-title {
         max-width: 496px;
@@ -1069,8 +1067,6 @@ a {
 
 
     .footer-container {
-        flex-direction: row;
-        flex-wrap: wrap;
 
         align-items: flex-start;
         justify-content: flex-start;
@@ -1108,12 +1104,6 @@ a {
     .modal {
         width: 408px;
         min-height: 584px;
-
-        top: 50%;
-        left: 50%;
-
-        transform: translateX(-50%) translateY(-50%);
-
         padding: 72px 24px 24px;
     }
 
@@ -1129,7 +1119,7 @@ a {
 /*                                  Desktop                           */
 
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1158px) and (min-resolution:2dppx) {
     .container {
         max-width: 1158px;
         padding: 0 15px;
@@ -1139,6 +1129,10 @@ a {
     .footer-container {
         gap: 120px;
         flex-wrap: nowrap;
+    }
+
+    .section {
+        padding: 120px 0;
     }
 
     /*header*/
@@ -1176,6 +1170,8 @@ a {
 
     /*hero*/
     .purpose {
+        max-width: 1440px;
+        margin: 0 auto;
         padding: 188px 0;
 
         background-image:
@@ -1183,13 +1179,13 @@ a {
             url('../images/people-office.jpg');
     }
 
-    @media (min-resolution:2dppx) {
-        .purpose {
-            background-image:
-                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url('../images/people-office@2x.jpg');
-        }
+
+    .purpose {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/people-office@2x.jpg');
     }
+
 
     .purpose-title {
         margin-bottom: 48px;
