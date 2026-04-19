@@ -1,33 +1,44 @@
 const openBtn = document.querySelector('.open-modal');
 const modal = document.querySelector('.backdrop');
-const closeBtn = document.querySelector('.modal-close');
+const closeBtn = modal.querySelector('.modal-close');
+const menuOpenBtn = document.querySelector('.menu-open-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+const menuCloseBtn = document.querySelector('.menu-close-btn');
 
-// Accesiibility Вона невидима для очей АЛЕ 
-// вона все ще існує в DOM M скрінрідер її ЧИТАЄ
-
-modal.setAttribute('aria-hidden', 'false');
-modal.setAttribute('aria-hidden', 'true');
-
-// Відкрити
-openBtn.addEventListener('click', () => {
-  modal.classList.add('is-open');
+menuOpenBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('is-open');
 });
 
-// Закрити по кнопці
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('is-open');
+menuCloseBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('is-open');
 });
 
-// Закрити по кліку на backdrop
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('is-open');
-  }
-});
-
-// Закрити по кліку на ESC
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    modal.classList.remove('is-open');
+    mobileMenu.classList.remove('is-open');
   }
+});
+
+openBtn.addEventListener('click', () => {
+modal.classList.add('is-open');
+modal.setAttribute('aria-hidden','false');
+});
+
+closeBtn.addEventListener('click', () => {
+modal.classList.remove('is-open');
+modal.setAttribute('aria-hidden','true');
+});
+
+modal.addEventListener('click', e => {
+if(e.target === modal){
+modal.classList.remove('is-open');
+modal.setAttribute('aria-hidden','true');
+}
+});
+
+document.addEventListener('keydown', e => {
+if(e.key === 'Escape'){
+modal.classList.remove('is-open');
+modal.setAttribute('aria-hidden','true');
+}
 });
