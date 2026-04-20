@@ -83,7 +83,7 @@ a {
 }
 
 
-/*                     ##### Header  MOBILE #####          */
+/*                                                                          Header  MOB          */
 .header {
     border-bottom: 1px solid #e7e9fc;
 }
@@ -165,7 +165,7 @@ a {
     background-color: #404bbf;
 }
 
-/*                      Mobile Menu                 */
+/*                                  Mobile Menu                 */
 .menu-open-btn {
     border: none;
     background: transparent;
@@ -271,7 +271,8 @@ a {
     line-height: 1.2;
     font-weight: 500;
 
-    color: #434455;
+    color: #4d5ae5;
+    ;
 }
 
 .mobile-phone,
@@ -288,7 +289,8 @@ a {
 
 .mobile-social {
     display: flex;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 0;
 }
 
 .menu-close-btn {
@@ -326,6 +328,7 @@ a {
 /*                            Purpose  MOBILE                            */
 .purpose {
     padding: 72px 0;
+    max-width: 320px;
 
 
     margin: 0 auto;
@@ -388,7 +391,7 @@ a {
     background-color: #404bbf;
 }
 
-/*FEATURES  MOBILE*/
+/*                                FEATURES  MOBILE*/
 
 .features-list {
     display: flex;
@@ -425,7 +428,7 @@ a {
     color: #434455;
 }
 
-/* TEAM MOBILE */
+/*                                   TEAM MOBILE */
 
 .worker-section {
     background-color: #f4f4fd;
@@ -504,7 +507,7 @@ a {
     gap: 24px;
 }
 
-/* PORTFOLIO MOBILE */
+/*                                   PORTFOLIO MOBILE */
 
 .portfolio-title {
     margin-bottom: 72px;
@@ -581,7 +584,7 @@ a {
         0 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-/* ================= FOOTER MOBILE ================= */
+/*                                              FOOTER MOBILE  */
 
 .footer {
     background-color: #2e2f42;
@@ -723,7 +726,7 @@ a {
     fill: #ffffff;
 }
 
-/*                             Modal                      */
+/*                                               Modal                      */
 
 .backdrop {
     position: fixed;
@@ -914,9 +917,9 @@ a {
     font-weight: 500;
 }
 
-/*                                  Tablet                           */
+/*                                                                                 TABLET          */
 
-@media screen and (min-width: 768px) and (min-resolution:2dppx) {
+@media screen and (min-width: 768px) {
 
     .container {
         max-width: 768px;
@@ -932,7 +935,7 @@ a {
         display: none;
     }
 
-    /*header*/
+    /*                                 header*/
     .header-wrapper {
         min-height: 72px;
 
@@ -982,22 +985,21 @@ a {
         display: none;
     }
 
-    /*hero*/
+    /*                                              Hero Tab                         */
 
     .purpose {
+        max-width: 768px;
         padding: 112px 0;
+        margin: 0 auto;
+
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url('../images/bg-header-tab.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
     }
-
-
-    .purpose {
-        background-image:
-            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url('../images/bg-header-tab@2x.jpg');
-    }
-
 
     .purpose-title {
         max-width: 496px;
@@ -1032,7 +1034,7 @@ a {
         text-align: left;
     }
 
-    /*team*/
+    /*                                            Team Tab               */
     .worker-list {
         display: flex;
         flex-direction: row;
@@ -1062,9 +1064,7 @@ a {
         width: calc((100% - 24px) / 2);
     }
 
-    /* =================  FOOTER  ================= */
-
-
+    /*                                               FOOTER                    */
 
     .footer-container {
 
@@ -1116,10 +1116,18 @@ a {
     }
 }
 
-/*                                  Desktop                           */
+@media screen and (min-width:768px) and (min-resolution:2dppx) {
+    .purpose {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, .7), rgba(46, 47, 66, .7)),
+            url('../images/bg-header-tab@2x.jpg');
+    }
+}
+
+/*                                                                           Desktop            */
 
 
-@media screen and (min-width: 1158px) and (min-resolution:2dppx) {
+@media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
         padding: 0 15px;
@@ -1177,13 +1185,6 @@ a {
         background-image:
             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url('../images/people-office.jpg');
-    }
-
-
-    .purpose {
-        background-image:
-            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url('../images/people-office@2x.jpg');
     }
 
 
@@ -1258,6 +1259,12 @@ a {
         top: 80px;
     }
 
+}
 
-
+@media screen and (min-width:1158px) and (min-resolution:2dppx) {
+    .purpose {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, .7), rgba(46, 47, 66, .7)),
+            url('../images/people-office@2x.jpg');
+    }
 }
