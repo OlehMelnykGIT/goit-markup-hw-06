@@ -271,8 +271,7 @@ a {
     line-height: 1.2;
     font-weight: 500;
 
-    color: #4d5ae5;
-    ;
+    color: #2e2f42;
 }
 
 .mobile-phone,
@@ -622,6 +621,7 @@ a {
 .footer-info {
     max-width: 288px;
 
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -900,6 +900,45 @@ a {
     margin-bottom: 24px;
 }
 
+.checkbox-text {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-custom {
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    fill: transparent;
+    transition: all 250ms ease;
+}
+
+.checkbox-input:checked+.checkbox-custom {
+    background-color: #404bbf;
+    border-color: #404bbf;
+    fill: #f4f4fd;
+}
+
+.privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+
 .form-btn {
     display: block;
 
@@ -953,6 +992,8 @@ a {
     .address {
         display: block;
         margin-left: auto;
+        font-style: normal;
+
     }
 
     .address-list {
@@ -966,10 +1007,12 @@ a {
         display: block;
 
         padding: 0;
+        font-style: normal;
 
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.04em;
+        font-style: normal;
 
         color: #434455;
 
@@ -1134,15 +1177,6 @@ a {
         margin: 0 auto;
     }
 
-    .footer-container {
-        gap: 120px;
-        flex-wrap: nowrap;
-    }
-
-    .section {
-        padding: 120px 0;
-    }
-
     /*header*/
     .header-wrapper {
         min-height: 72px;
@@ -1255,10 +1289,38 @@ a {
         width: calc((100% - 48px) / 3);
     }
 
-    .modal {
-        top: 80px;
+    /*                                       footer         */
+
+    .footer-container {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: nowrap;
+        gap: 0;
     }
 
+    .footer-left {
+        width: 264px;
+        margin-right: 120px;
+        flex-shrink: 0;
+    }
+
+    .footer-social {
+        margin-right: 80px;
+        flex-shrink: 0;
+    }
+
+    .footer-subscribe {
+        width: auto;
+        flex-grow: 1;
+    }
+
+    .footer-info {
+        max-width: 264px;
+    }
+
+    .section {
+        padding: 120px 0;
+    }
 }
 
 @media screen and (min-width:1158px) and (min-resolution:2dppx) {
