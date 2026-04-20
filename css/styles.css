@@ -619,7 +619,9 @@ a {
 }
 
 .footer-info {
+    text-align: left;
     max-width: 288px;
+    margin: 0 auto;
 
 
     font-size: 16px;
@@ -1007,7 +1009,6 @@ a {
         display: block;
 
         padding: 0;
-        font-style: normal;
 
         font-size: 12px;
         line-height: 1.17;
